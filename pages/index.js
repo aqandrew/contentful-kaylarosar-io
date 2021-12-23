@@ -16,49 +16,26 @@ export default function Home({ posts }) {
 
       <main>
         <Header />
-        <div className="posts">
+        <ul className="posts">
           {posts.map((p) => {
-            return <Post key={p.title} date={p.date} title={p.title} />
+            // TODO Grab date from post metadata
+            return <Post key={p.title} title={p.title} />
           })}
-        </div>
+        </ul>
       </main>
 
       <Footer />
-
-      <style jsx>{`
-        .container {
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .posts {
-          display: flex;
-        }
-      `}</style>
 
       <style jsx global>{`
         html,
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
         }
 
-        * {
+        *,
+        *:before,
+        *:after {
           box-sizing: border-box;
         }
       `}</style>
