@@ -67,7 +67,7 @@ function Post({ date, image, title }) {
         }
       `}</style>
     </div>
-  );
+  )
 }
 
-export default Post;
+export default Post

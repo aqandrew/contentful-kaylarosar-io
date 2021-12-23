@@ -1,10 +1,10 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import { fetchEntries } from '@utils/contentfulPosts';
+import { fetchEntries } from '@utils/contentfulPosts'
 
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import Post from '@components/Post';
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import Post from '@components/Post'
 
 export default function Home({ posts }) {
   return (
@@ -18,7 +18,7 @@ export default function Home({ posts }) {
         <Header />
         <div className="posts">
           {posts.map((p) => {
-            return <Post key={p.title} date={p.date} title={p.title} />;
+            return <Post key={p.title} date={p.date} title={p.title} />
           })}
         </div>
       </main>
@@ -63,18 +63,18 @@ export default function Home({ posts }) {
         }
       `}</style>
     </div>
-  );
+  )
 }
 
 export async function getStaticProps() {
-  const res = await fetchEntries();
+  const res = await fetchEntries()
   const posts = await res.map((p) => {
-    return p.fields;
-  });
+    return p.fields
+  })
 
   return {
     props: {
       posts,
     },
-  };
+  }
 }
