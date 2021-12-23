@@ -1,13 +1,15 @@
 function Post({ date, image, title }) {
-  let { file, description } = image
+  // let { file, description } = image
 
   return (
     <div className="post">
-      <img alt={description} src={`https:${file.url}`} />
-      <div className="description">{description}</div>
+      {/* TODO Add image to post preview */}
+      {/* <img alt={description} src={`https:${file.url}`} /> */}
+      {/* <div className="description">{description}</div> */}
       <div className="text">
         <h2>{title}</h2>
-        <h3>{date.substring(0, 10)}</h3>
+        {/* TODO Add date to post preview */}
+        {/* <h3>{date.substring(0, 10)}</h3> */}
       </div>
 
       <style jsx>{`
@@ -23,7 +25,11 @@ function Post({ date, image, title }) {
           top: 0;
           padding: 10px;
           box-sizing: border-box;
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 100%);
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 1) 100%
+          );
           height: 100px;
           opacity: 0;
           transition: opacity 0.5s;
@@ -38,7 +44,11 @@ function Post({ date, image, title }) {
           box-sizing: border-box;
           width: 100%;
           height: 70px;
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0) 100%);
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 20%,
+            rgba(0, 0, 0, 0) 100%
+          );
         }
         h2,
         h3 {
@@ -57,7 +67,7 @@ function Post({ date, image, title }) {
         }
       `}</style>
     </div>
-  )
+  );
 }
 
-export default Post
+export default Post;
