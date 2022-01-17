@@ -1,4 +1,4 @@
-function PostPreview({ date, image, title, slug }) {
+export default function PostPreview({ date, image, title, slug }) {
   // let { file, description } = image
 
   return (
@@ -14,5 +14,3 @@ function PostPreview({ date, image, title, slug }) {
     </li>
   )
 }
-
-export default PostPreview
