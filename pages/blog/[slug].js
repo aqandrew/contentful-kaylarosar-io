@@ -2,9 +2,12 @@ import { fetchEntries, fetchPost } from '@utils/contentfulPosts'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 export default function Post({ post }) {
+  const category = post.category.fields
+
   return (
     <>
       <h1>{post.title}</h1>
+      <p>Category: {category.title}</p>
       {documentToReactComponents(post.body)}
     </>
   )
