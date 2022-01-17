@@ -1,4 +1,4 @@
-function Post({ date, image, title }) {
+function PostPreview({ date, image, title, slug }) {
   // let { file, description } = image
 
   return (
@@ -6,11 +6,13 @@ function Post({ date, image, title }) {
       {/* TODO Add image to post preview */}
       {/* <img alt={description} src={`https:${file.url}`} /> */}
       {/* <div className="description">{description}</div> */}
-      <h2>{title}</h2>
+      <a href={`/blog/${slug}`}>
+        <h2>{title}</h2>
+      </a>
       {/* TODO Add date to post preview */}
       {/* <h3>{date.substring(0, 10)}</h3> */}
     </li>
   )
 }
 
-export default Post
+export default PostPreview

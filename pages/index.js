@@ -4,7 +4,7 @@ import { fetchEntries } from '@utils/contentfulPosts'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Post from '@components/Post'
+import PostPreview from '@components/PostPreview'
 
 export default function Home({ posts }) {
   return (
@@ -19,7 +19,7 @@ export default function Home({ posts }) {
         <ul className="posts">
           {posts.map((p) => {
             // TODO Grab date from post metadata
-            return <Post key={p.title} title={p.title} />
+            return <PostPreview key={p.title} {...p} />
           })}
         </ul>
       </main>

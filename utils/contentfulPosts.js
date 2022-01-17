@@ -17,4 +17,13 @@ export async function fetchEntries() {
   console.log(`Error getting Entries for ${contentType.name}.`)
 }
 
+export async function fetchPost(slug) {
+  const entries = await client.getEntries({
+    content_type: 'post',
+    'fields.slug': slug,
+  })
+
+  return entries.items[0]
+}
+
 export default { fetchEntries }
