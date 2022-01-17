@@ -1,7 +1,13 @@
 import { fetchEntries, fetchPost } from '@utils/contentfulPosts'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 export default function Post({ post }) {
-  return <h1>{post.title}</h1>
+  return (
+    <>
+      <h1>{post.title}</h1>
+      {documentToReactComponents(post.body)}
+    </>
+  )
 }
 
 export async function getStaticProps({ params }) {
