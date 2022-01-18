@@ -26,20 +26,6 @@ export default function Home({ posts }) {
       </main>
 
       <Footer />
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-        }
-
-        *,
-        *:before,
-        *:after {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   )
 }
