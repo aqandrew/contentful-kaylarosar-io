@@ -10,7 +10,7 @@ export default function PostPreview({ date, image, title, slug }) {
       {/* <div className="description">{description}</div> */}
       <Link href={`/blog/${slug}`}>
         <a>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
         </a>
       </Link>
       {/* TODO Add date to post preview */}

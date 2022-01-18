@@ -1,4 +1,4 @@
-import { fetchEntries, fetchPost } from '@utils/contentfulPosts'
+import { fetchPosts, fetchPost } from '@utils/contentfulPosts'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 export default function Post({ post, category }) {
@@ -19,7 +19,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = await fetchEntries()
+  const posts = await fetchPosts()
 
   return {
     paths:
