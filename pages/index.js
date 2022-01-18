@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { siteName } from 'config'
 import { fetchEntries } from '@utils/contentfulPosts'
 
 import Header from '@components/Header'
@@ -10,7 +11,7 @@ export default function Home({ posts }) {
   return (
     <div className="container">
       <Head>
-        <title>Next + Contentful Starter</title>
+        <title>{siteName}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
