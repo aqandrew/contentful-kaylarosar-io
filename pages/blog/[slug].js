@@ -28,6 +28,6 @@ export async function getStaticPaths() {
           slug: post.fields.slug,
         },
       })) || [],
-    fallback: true,
+    fallback: false,
   }
 }
